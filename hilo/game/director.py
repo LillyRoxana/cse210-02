@@ -1,34 +1,61 @@
 from game.card import Card
 
 class Director:
-
+   
     def __init__(self):
-        self.card = []
-        self.is_playing = True
+        
+        self.keep_playing = True
         self.score = 300
-        self.total_score = 0
+        self.dealer = Card()
 
+    
     def start_game(self):
-        print("Welcome to Hilo Card Game")
-        while self.is_playing:
+        
+       
+
+        while self.keep_playing:
+            
             self.get_inputs()
-            self.get_guess()            
             self.do_updates()
             self.do_outputs()
+            self.can_deal()
+
     
     def get_inputs(self):
-        play_card = input("Play again? y/n")
-        self.is_playing = (play_card == "y")
+        print(f"Welcome to Hilo Game!")
+        self.dealer.deal_card()
+        print(f"\nThe card is: {self.dealer.current_card}")
+        self.dealer.get_guess()
+        
+        self.dealer.deal_next_card()
+        print(f"Next card was: {self.dealer.next_card}")
 
-    def get_guess(self):
-        guess_card = input("Higher or lower? h/l")
-        self.is_playing = (guess_card == "h" or guess_card == "l")
+
 
     def do_updates(self):
-        if not self.is_playing: 
-            return
-
+    
+        points = self.dealer.get_points()
+        self.score += points
+       
+      
+         
+   
     def do_outputs(self):
-        if not self.is_playing: 
-            return
+      
+        print(f"Your score is: {self.score}")
+        if self.can_deal():
+            choice = input("Keep playing? [y/n]: ")
+            self.keep_playing = (choice == "y")
+        else:
+            self.keep_playing = False
+    
+    
+    
+    
+    
+    
+   
+    def can_deal(self):
+        
+        return self.score > 0
 
