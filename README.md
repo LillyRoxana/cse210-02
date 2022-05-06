@@ -19,7 +19,7 @@ The player loses 75 points if they guessed incorrectly. If a player reaches 0 po
 ## Required Technologies
 ---
 
-* Python 3.8.0
+* Python 3.10.0
 
 ## Authors
 ---
