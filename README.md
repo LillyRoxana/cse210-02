@@ -11,7 +11,7 @@ The player loses 75 points if they guessed incorrectly. If a player reaches 0 po
 
 ## Project Structure
 ---
-
+The project files and folders are organized as follows:
 ```
 
 ```
