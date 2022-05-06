@@ -39,8 +39,6 @@ class Card:
         else:
             self.score = -75
 
-        #self.score = 100 if (self.guess == "h" and self.value > self.prior) or (self.guess == "l" and self.value < self.prior) else self.score = -75
-        
         self.total_score += self.score
 
 class Director:
