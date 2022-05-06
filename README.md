@@ -11,6 +11,7 @@ The player loses 75 points if they guessed incorrectly. If a player reaches 0 po
 
 ## Project Structure
 ---
+The project files and folders are organized as follows:
 
 ```
 root                    (project root folder)
@@ -19,8 +20,6 @@ root                    (project root folder)
   +-- __init__.py       (python package file)
   +-- __main__.py       (entry point for program)
 +-- README.md           (general info)
-
-
 ```
 
 ## Required Technologies
