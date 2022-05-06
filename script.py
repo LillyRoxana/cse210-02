@@ -40,14 +40,40 @@ class Card:
         
         self.total_score += self.score
 
-    def 
 
 # class2 goes here
 class Director:
+
+    def __init__(self):
+        self.card = []
+        self.is_playing = True
+        self.score = 300
+        self.total_score = 0
+
     def start_game(self):
         print("Welcome to Hilo Card Game")
-        while self.play == True:
-            self.play()
+        while self.is_playing:
+            self.get_inputs()
+            self.get_guess()            
+            self.do_updates()
+            self.do_outputs()
+    
+    def get_inputs(self):
+        play_card = input("Play again? Y/N")
+        self.is_playing = (play_card == "Y")
+
+    def get_guess(self):
+        guess_card = input("Higher or Lower? H/L")
+        self.is_playing = (guess_card == "H" or guess_card == "L")
+
+    def do_updates(self):
+        if not self.is_playing: 
+            return
+
+    def do_outputs(self):
+        if not self.is_playing: 
+            return
+
 # method goes here
 
 print(self.score)
