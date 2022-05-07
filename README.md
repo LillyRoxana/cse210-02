@@ -29,6 +29,10 @@ root                    (project root folder)
 
 ## Authors
 ---
-* J
+* Lilly Roxana Armenta
+* Josh Ausborne
+* Felix Florez
+* Kaylie Nelson
+* Jesus Tortolero
 
 
