@@ -13,6 +13,9 @@ The player loses 75 points if they guessed incorrectly. If a player reaches 0 po
 ---
 The project files and folders are organized as follows:
 ```
+__main__.py - the initial launch file
+hilo/director.py - directs the game action
+hilo/hilo.py - performs the game action
 
 ```
 
@@ -24,5 +27,9 @@ The project files and folders are organized as follows:
 ## Authors
 ---
 
-
+- Lilly Roxana Armenta
+- Josh Ausborne
+- Felix Florez
+- Kaylie Nelson
+- Jesus Tortolero
 
