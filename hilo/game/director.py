@@ -8,6 +8,7 @@ class Director:
         self.score = 300
         self.total_score = 0
         self.guess = ""
+        hilo = Hilo()
 
     def start_game(self):
         print("Welcome to Hilo Card Game")
@@ -22,14 +23,16 @@ class Director:
         self.is_playing = (play_card == "y")
 
     def get_guess(self):
-        guess_card = input("Higher or lower? [h/l] ")
-        self.is_playing = (guess_card == "h" or guess_card == "l")
+        guess = input("Higher or lower? [h/l] ")
+        self.is_playing = (guess == "h" or guess == "l")
 
     def do_updates(self):
         if not self.is_playing: 
             return
 
-        values = ""
+        value = ""
+        value = "this is a test"
+        print(value)
         if self.guess == "h":
             print(f"You guessed that the card would be higher.")
         elif self.guess == "l":
