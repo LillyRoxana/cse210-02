@@ -9,7 +9,6 @@ class Hilo:
 
     def play(self):
         self.value = random.randint(1, 13)
-        self.guess = input("Higher or lower? [h/l]: ")## INPUT ##
         self.prior = self.value
         if (self.guess == "h" and self.value > self.prior) or (self.guess == "l" and self.value < self.prior):
             self.score = 100
