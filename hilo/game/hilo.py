@@ -6,6 +6,7 @@ class Hilo:
         self.value = 0
         self.total_score = 0
         self.play = True
+        self.guess = []
 
     def play(self):
         self.value = random.randint(1, 13)
@@ -16,4 +17,3 @@ class Hilo:
             self.score = -75
 
         self.total_score += self.score
-
