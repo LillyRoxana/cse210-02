@@ -18,8 +18,8 @@ class Director:
         while self.is_playing:
             self.card2 = self.card.shuffle_card()
             print(f"The card is: {self.card2}")
-            self.get_inputs()  
-            self.update()       
+            self.get_inputs()
+            self.update()
 
 
 # Method:
