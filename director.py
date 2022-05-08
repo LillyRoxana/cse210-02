@@ -73,6 +73,9 @@ class Director:
         elif choice == "l" and self.card2 > prior:
             self.total_score = self.score - 75
             self.score = self.total_score
+        else:
+            print("That was not a valid option")
+            self.get_inputs()
 
 #*Method to check the total score. And where the player decide if he wants to continue. 
     def update(self):
@@ -88,6 +91,7 @@ class Director:
             elif play_card == "n":
                 print("Thank you for playing!!!")
                 self.is_playing = False
+            else:
+                print("That was not a valid option")
+                self.update()
 
-        
-        
