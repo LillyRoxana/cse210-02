@@ -8,8 +8,9 @@ class Director:
         self.score = 300
         self.total_score = 0
 
+
 # Method:
-# Start the game here. Use while loope to help the game continue. Game will until
+# Start the game here. Use while loop to help the game continue. Game will until
 # player reaches 0 points, or until player selects "n" at the prompt.
 
     def start_game(self):
