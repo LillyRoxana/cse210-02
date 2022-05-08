@@ -85,7 +85,7 @@ class Director:
             self.is_playing = False
         else:
             print(f"Your score is: {self.total_score}")
-            play_card = input("Play again? y/n\n")
+            play_card = input("Play again? [y/n] ")
             if play_card == "y":
                 self.is_playing = True
             elif play_card == "n":
