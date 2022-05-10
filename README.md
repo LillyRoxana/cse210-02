@@ -11,17 +11,16 @@ The the next card is displayed. The player earns 100 points if they guessed corr
 The player loses 75 points if they guessed incorrectly. If a player reaches 0 points the game is over. If a player has more than 0 points they decide if they want to keep playing. If a player decides not to play again the game is over.
 
 
-## Project Structure
+### Project Structure
 
-The project files and folders are organized as follows:
-.
-|--- .gitignore
-|--- README.md
-|--- hilo
-|    |--- __main__.py - the initial launch file
-|    |--- game
-|    |    |--- director.py - directs the game action
-|    |    |--- shuffle.py - performs the game action
+    .
+    ├── .gitignore
+    ├── hilo
+    │   ├── __main__.py         # The initial launch file
+    │   └── game 
+    │       ├── director.py     # Directs the game action
+    │       └── hilo.py         # performs the game action
+    └── README.md
 
 
 ## Required Technologies
