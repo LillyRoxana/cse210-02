@@ -1,8 +1,24 @@
+from ast import Break, Try
 from game.hilo import Hilo
 
 class Director:
+    
+    """A person who directs the game. 
+    
+    The responsibility of a Director is to control the sequence of play.
 
+    Attributes:
+        is_playing (boolean): Whether or not the game is being played.
+        score (int): The score for one round of play.
+        total_score (int): The score for the entire game.
+    """
     def __init__(self):
+
+        """Constructs a new Director.
+        
+        Args:
+            self (Director): an instance of Director.
+        """
         self.card = Hilo()
         self.is_playing = True
         self.score = 300
@@ -13,7 +29,7 @@ class Director:
 # Start the game here. Use while loop to help the game continue. Game will until
 # player reaches 0 points, or until player selects "n" at the prompt.
 
-    def start_game(self):
+    def start_game(self):        
         print("Welcome to Hilo Card Game")
         while self.is_playing:
             self.card2 = self.card.shuffle_card()
@@ -28,7 +44,7 @@ class Director:
 
     def get_inputs(self):
         prior = self.card2[0]
-        choice = input("Higher or lower? [h/l] ")
+        choice = input("Higher or lower? [h/l]: ")  
         self.card2 = self.card.shuffle_card()
         if choice == "h" and self.card2[0] > prior:
             self.total_score = self.score + 100
@@ -71,4 +87,5 @@ class Director:
             else:
                 print("That was not a valid option")
                 self.update()
+
 
