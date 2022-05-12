@@ -17,7 +17,7 @@ class Director:
         print("Welcome to Hilo Card Game")
         while self.is_playing:
             self.card2 = self.card.shuffle_card()
-            print(f"The card is: {self.card2}")
+            print(f"\nThe card is: {self.card2[0]} of {self.card2[1]}")
             self.get_inputs()
             self.update()
 
@@ -27,25 +27,29 @@ class Director:
 # correctly, they get 100 points. If they choose incorrectly, they lose 75 points.
 
     def get_inputs(self):
-        prior = self.card2
+        prior = self.card2[0]
         choice = input("Higher or lower? [h/l] ")
         self.card2 = self.card.shuffle_card()
-        print(f"Next card was: {self.card2}")
-        if choice == "h" and self.card2 > prior:
+        if choice == "h" and self.card2[0] > prior:
             self.total_score = self.score + 100
             self.score = self.total_score
-        elif choice == "l" and self.card2 < prior:
+            print(f"Next card was: {self.card2[0]} of {self.card2[1]}")
+        elif choice == "l" and self.card2[0] < prior:
             self.total_score = self.score + 100
             self.score = self.total_score
-        elif choice == "h" and self.card2 < prior:
+            print(f"Next card was: {self.card2[0]} of {self.card2[1]}")
+        elif choice == "h" and self.card2[0] < prior:
             self.total_score = self.score - 75
             self.score = self.total_score
-        elif choice == "l" and self.card2 > prior:
+            print(f"Next card was: {self.card2[0]} of {self.card2[1]}")
+        elif choice == "l" and self.card2[0] > prior:
             self.total_score = self.score - 75
             self.score = self.total_score
+            print(f"Next card was: {self.card2[0]} of {self.card2[1]}")
         else:
             print("That was not a valid option")
             self.get_inputs()
+        
 
 # Method:
 # Check to see if the score is less than or equal to zero. Also inquire if the

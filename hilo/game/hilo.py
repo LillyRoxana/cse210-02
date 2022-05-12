@@ -13,4 +13,13 @@ class Hilo:
 
     def shuffle_card(self):
         self.value = random.randint(1, 13)
-        return self.value
+        self.suit = random.randint(1, 4)
+        if self.suit == 1:
+            self.suit = "Spades"
+        elif self.suit == 2:
+            self.suit = "Clubs"
+        elif self.suit == 3:
+            self.suit = "Hearts"
+        else:
+            self.suit = "Diamonts"
+        return self.value, self.suit
