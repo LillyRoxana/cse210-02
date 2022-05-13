@@ -29,7 +29,7 @@ class Director:
 # Start the game here. Use while loop to help the game continue. Game will until
 # player reaches 0 points, or until player selects "n" at the prompt.
 
-    def start_game(self):        
+    def start_game(self):
         print("Welcome to Hilo Card Game")
         while self.is_playing:
             self.card2 = self.card.shuffle_card()
@@ -44,7 +44,7 @@ class Director:
 
     def get_inputs(self):
         prior = self.card2[0]
-        choice = input("Higher or lower? [h/l]: ")  
+        choice = input("Higher or lower? [h/l]: ")
         self.card2 = self.card.shuffle_card()
         if choice == "h" and self.card2[0] > prior:
             self.total_score = self.score + 100
